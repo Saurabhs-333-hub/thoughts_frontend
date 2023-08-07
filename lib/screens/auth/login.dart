@@ -6,6 +6,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:thoughts/screens/auth/register.dart';
 import 'package:thoughts/screens/home.dart';
 
@@ -220,8 +221,10 @@ class _LoginState extends State<Login> {
                           duration: Duration(milliseconds: 900),
                         ),
                     GestureDetector(
-                      onTap: () => Navigator.pushReplacement(context,
-                          MaterialPageRoute(builder: (context) => Home())),
+                      onTap: () => Navigator.pushReplacement(
+                          context,
+                          PageTransition(
+                              type: PageTransitionType.fade, child: Home())),
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Container(
@@ -420,8 +423,10 @@ class _LoginState extends State<Login> {
                   Text("Don't have an account?",
                       style: GoogleFonts.adamina(color: Colors.white)),
                   GestureDetector(
-                    onTap: () => Navigator.pushReplacement(context,
-                        MaterialPageRoute(builder: (context) => Register())),
+                    onTap: () => Navigator.pushReplacement(
+                        context,
+                        PageTransition(
+                            type: PageTransitionType.fade, child: Register())),
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Text(
