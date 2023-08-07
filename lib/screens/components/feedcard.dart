@@ -90,7 +90,7 @@ class _FeedCardState extends State<FeedCard> {
                                     ],
                                     title: Text(
                                         "Profile development is under process!",
-                                        style: TextStyle(
+                                        style: GoogleFonts.adamina(
                                             color: Colors.white, fontSize: 24)),
                                     content: Text("Try sometime later!",
                                         style: TextStyle(color: Colors.grey)),

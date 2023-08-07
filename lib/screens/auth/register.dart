@@ -146,7 +146,9 @@ class RegisterState extends State<Register> {
               width: double.maxFinite,
               decoration: BoxDecoration(
                   color: Color.fromARGB(73, 0, 0, 0),
-                  borderRadius: BorderRadius.circular(40)),
+                  borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(40),
+                      topRight: Radius.circular(40))),
               child: SizedBox(
                 // height: 400,
                 child: Column(
@@ -226,7 +228,10 @@ class RegisterState extends State<Register> {
                           // height: 50,
                           width: 200,
                           decoration: BoxDecoration(
-                              color: Color.fromARGB(50, 255, 255, 255),
+                              border: Border.all(
+                                  color: Color.fromARGB(141, 255, 255, 255),
+                                  width: 2),
+                              // color: Color.fromARGB(50, 255, 255, 255),
                               borderRadius: BorderRadius.circular(32)),
                           child: Center(
                             child: Padding(
@@ -235,7 +240,7 @@ class RegisterState extends State<Register> {
                                   child: Text(
                                     "Register",
                                     style: GoogleFonts.adamina(
-                                        color: Colors.white, fontSize: 24),
+                                        color: Colors.white, fontSize: 18),
                                   ),
                                 )),
                           ),

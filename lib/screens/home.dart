@@ -21,6 +21,7 @@ class _HomeState extends State<Home> {
         itemBuilder: (context, index) => FeedCard(),
       ),
       floatingActionButton: FloatingActionButton(
+          backgroundColor: Colors.black,
           onPressed: () {
             showDialog(
                 context: context,
@@ -38,7 +39,7 @@ class _HomeState extends State<Home> {
                           style: GoogleFonts.adamina(color: Colors.grey)),
                     ));
           },
-          child: Icon(Icons.add_rounded)),
+          child: Icon(Icons.add_rounded, color: Colors.white)),
     );
   }
 }
